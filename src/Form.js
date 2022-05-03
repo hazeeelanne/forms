@@ -22,7 +22,7 @@ const { handleChange, handleSubmit, values, errors } = useForm(
       <div className='form-container'>
         <span className='close-btn'>×</span>
         <div className='form-content-left'>
-         {/* <img className='form-img' src='img/img-2.svg' alt='spaceship' />*/}
+         <img className='form-img' src='img/signup.png' alt='signup' />
         </div>
         {!isSubmitted ? (
           <div className='form-content-right'>
@@ -38,6 +38,30 @@ const { handleChange, handleSubmit, values, errors } = useForm(
             type='text'
             name='username'
             placeholder='Enter your username'
+            value={values.username}
+            onChange={handleChange}
+          />
+          {errors.username && <p>{errors.username}</p>}
+        </div>
+          <div className='form-inputs'>
+          <label className='form-label'>First Name</label>
+          <input
+            className='form-input'
+            type='text'
+            name='firstname'
+            placeholder='Enter your First Name'
+            value={values.username}
+            onChange={handleChange}
+          />
+          {errors.username && <p>{errors.username}</p>}
+        </div>
+          <div className='form-inputs'>
+          <label className='form-label'>Last Name</label>
+          <input
+            className='form-input'
+            type='text'
+            name='lastname'
+            placeholder='Enter your Last Name'
             value={values.username}
             onChange={handleChange}
           />

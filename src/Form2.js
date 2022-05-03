@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Form.css';
 import validate from './validateInfo';
 import useForm from './useForm';
-import './Form.css';
 import FormSuccess from './FormSuccess';
 import { useHistory } from 'react-router-dom';
 
@@ -23,7 +22,7 @@ const { handleChange, handleSubmit, values, errors } = useForm(
       <div className='form-container'>
         <span className='close-btn'>×</span>
         <div className='form-content-left'>
-          {/*<img className='form-img' src='img/img-2.svg' alt='spaceship' />*/}
+         <img className='form-img' src='img/login.png' alt='login' />
         </div>
         {!isSubmitted ? (
           <div className='form-content-right'>
