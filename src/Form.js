@@ -67,7 +67,7 @@ const { handleChange, handleSubmit, values, errors } = useForm(
           {errors.lastname && <p>{errors.lastname}</p>}
         </div>
         <div className='form-inputs'>
-          <label className='form-label'>Birth date</label>
+          <label className='form-label'>Date of Birth</label>
           <input
             className='form-input'
             type='date'
