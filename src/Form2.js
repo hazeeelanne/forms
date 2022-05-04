@@ -20,7 +20,6 @@ const { handleChange, handleSubmit, values, errors } = useForm(
   return (
     <>
       <div className='form-container'>
-        <span className='close-btn'>×</span>
         <div className='form-content-left'>
          <img className='form-img' src='img/login.png' alt='login' />
         </div>
@@ -74,13 +73,14 @@ const { handleChange, handleSubmit, values, errors } = useForm(
           <span className='form-input-login' onClick={()=>{
           history.push("/");
         }}>
-       Sign up
+      Don't have an account? Sign up
         </span> 
       </form>
     </div>
-        ) : (
-          <FormSuccess />
-        )}
+        ) : ( 
+       <div>
+       <text>Successfully Logged in</text>
+       </div>)}
       </div>
     </>
   );

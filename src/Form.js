@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './Form.css';
 import validate from './validateInfo';
 import useForm from './useForm';
-import './Form.css';
 import FormSuccess from './FormSuccess';
 import {Link} from 'react-router-dom';
 import {useHistory} from "react-router-dom";
 
 const Form = () => {
   let history =useHistory();
+  const current = new Date().toISOString().split("T")[0]
 const [isSubmitted, setIsSubmitted] = useState(false);
 const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
@@ -20,7 +20,6 @@ const { handleChange, handleSubmit, values, errors } = useForm(
   return (
     <>
       <div className='form-container'>
-        <span className='close-btn'>×</span>
         <div className='form-content-left'>
          <img className='form-img' src='img/signup.png' alt='signup' />
         </div>
@@ -50,10 +49,10 @@ const { handleChange, handleSubmit, values, errors } = useForm(
             type='text'
             name='firstname'
             placeholder='Enter your First Name'
-            value={values.username}
+            value={values.firstname}
             onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {errors.firstname && <p>{errors.firstname}</p>}
         </div>
           <div className='form-inputs'>
           <label className='form-label'>Last Name</label>
@@ -62,11 +61,24 @@ const { handleChange, handleSubmit, values, errors } = useForm(
             type='text'
             name='lastname'
             placeholder='Enter your Last Name'
-            value={values.username}
+            value={values.lastname}
             onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {errors.lastname && <p>{errors.lastname}</p>}
         </div>
+        <div className='form-inputs'>
+          <label className='form-label'>Birth date</label>
+          <input
+            className='form-input'
+            type='date'
+            name='birthdate'
+            max= {current}
+            value={values.birthdate}
+            onChange={handleChange}
+          />
+          {errors.birthdate && <p>{errors.birthdate}</p>}
+        </div>
+        
         <div className='form-inputs'>
           <label className='form-label'>Email</label>
           <input
