@@ -49,11 +49,20 @@
 
 .form-success {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
+  padding-top: 300px;
   margin-top: 80px;
   color: #fff;
 }
+.gend {
+  display: flex;
+  margin-left: 64px;
+}
 
+.dgend {
+  text-align: center;
+  margin: -5px 56px 5px 4px;
+}
 .form-content-right {
   border-radius: 0 10px 10px 0;
   position: relative;

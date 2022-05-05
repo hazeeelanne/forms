@@ -20,7 +20,7 @@ export default function validateInfo(values) {
     errors.email = 'Email address is invalid';
   }
    if (!values.birthdate) {
-    errors.birthdate = 'Birth date is required';}
+    errors.birthdate = 'Date of Birth is required';}
 
   if (!values.password) {
     errors.password = 'Password is required';

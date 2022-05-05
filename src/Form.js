@@ -3,7 +3,6 @@ import './Form.css';
 import validate from './validateInfo';
 import useForm from './useForm';
 import FormSuccess from './FormSuccess';
-import {Link} from 'react-router-dom';
 import {useHistory} from "react-router-dom";
 
 const Form = () => {
@@ -79,6 +78,7 @@ const { handleChange, handleSubmit, values, errors } = useForm(
           {errors.birthdate && <p>{errors.birthdate}</p>}
         </div>
         
+        
         <div className='form-inputs'>
           <label className='form-label'>Email</label>
           <input
@@ -121,7 +121,7 @@ const { handleChange, handleSubmit, values, errors } = useForm(
         <span className='form-input-login' onClick={()=>{
           history.push("/form2");
         }}>
-        Already have an account? 
+        Already have an account? Login
         </span>
       </form>
     </div>
