@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './Form.css';
-import validate from './validateInfo';
-import useForm from './useForm';
-import FormSuccess from './FormSuccess';
+import validate2 from './validateInfor2';
+import useForm2 from './useform2';
+import FormSuccess2 from './FormSuccess2';
 import { useHistory } from 'react-router-dom';
 
 const Form2 = () => {
  
   const [isSubmitted, setIsSubmitted] = useState(false);
-const { handleChange, handleSubmit, values, errors } = useForm(
+const { handleChange, handleSubmit, values, errors } = useForm2(
     submitForm,
-    validate
+    validate2
   );
   function submitForm() {
     setIsSubmitted(true);
@@ -77,9 +77,8 @@ const { handleChange, handleSubmit, values, errors } = useForm(
       </form>
     </div>
         ) : ( 
-       <div>
-       <text>Successfully Logged in</text>
-       </div>)}
+              <FormSuccess2 />
+)}
       </div>
     </>
   );
